@@ -7,7 +7,10 @@ import '../stylesheets/ui.scss';
 function App(){
   return (
     <div>
-      <SkiDayCount/>
+      <SkiDayCount total={50}
+                   powder={20}
+                   backcountry={10}
+                   goal={100}/>
     </div>
   );
 }

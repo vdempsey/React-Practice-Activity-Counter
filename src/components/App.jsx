@@ -9,7 +9,9 @@ function App() {
     <div className="app">
       <Router history={hashHistory}>
         <Route path="/" component={SplashPage} />
-        <Route path="/list-days" component={SplashPage} />
+        <Route path="/list-days" component={SplashPage}>
+          <Route path=":filter" component={SplashPage} />
+        </Route>
         <Route path="/add-day" component={SplashPage} />
         <Route path="*" component={Error404}/>
       </Router>

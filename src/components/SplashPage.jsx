@@ -43,17 +43,17 @@ class SplashPage extends React.Component {
     return (
       <div className="app">
         <Menu />
-        {(this.props.location.pathname === "/") ?
+        {(this.props.location.pathname === '/') ?
   			  <SkiDayCount total={this.countDays()}
   							 powder={this.countDays(
-  							 		"powder"
+  							 		'powder'
   							 	)}
   							 backcountry={this.countDays(
-  							 		"backcountry"
+  							 		'backcountry'
   							 	)}/> :
-  			 (this.props.location.pathname === "/add-day") ?
+  			 (this.props.location.pathname === '/add-day') ?
   			 	<AddDayForm /> :
-  			 	<SkiDayList days={this.state.allSkiDays}/>
+  			 	<SkiDayList days={this.state.allSkiDays} filter={this.props.params.filter}/>
   			}
       </div>
     );

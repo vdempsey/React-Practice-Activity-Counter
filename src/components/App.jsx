@@ -9,6 +9,8 @@ function App() {
     <div className="app">
       <Router history={hashHistory}>
         <Route path="/" component={SplashPage} />
+        <Route path="/list-days" component={SplashPage} />
+        <Route path="/add-day" component={SplashPage} />
         <Route path="*" component={Error404}/>
       </Router>
     </div>

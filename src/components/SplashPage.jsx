@@ -1,6 +1,8 @@
 import React from 'react';
 import SkiDayList from './SkiDayList';
 import SkiDayCount from './SkiDayCount';
+import Menu from './Menu';
+import AddDayForm from './AddDayForm';
 import '../stylesheets/ui.scss';
 
 class SplashPage extends React.Component {
@@ -40,8 +42,19 @@ class SplashPage extends React.Component {
   render() {
     return (
       <div className="app">
-        <SkiDayList days={this.state.allSkiDays}/>
-        <SkiDayCount total={this.countDays()} powder={this.countDays('powder')} backcountry={this.countDays('backcountry')}/>
+        <Menu />
+        {(this.props.location.pathname === "/") ?
+  			  <SkiDayCount total={this.countDays()}
+  							 powder={this.countDays(
+  							 		"powder"
+  							 	)}
+  							 backcountry={this.countDays(
+  							 		"backcountry"
+  							 	)}/> :
+  			 (this.props.location.pathname === "/add-day") ?
+  			 	<AddDayForm /> :
+  			 	<SkiDayList days={this.state.allSkiDays}/>
+  			}
       </div>
     );
   }

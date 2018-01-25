@@ -1,6 +1,5 @@
 import React from 'react';
 import SkiDayRow from './SkiDayRow';
-import PropTypes from 'prop-types';
 
 function SkiDayList ({days}) {
   return (

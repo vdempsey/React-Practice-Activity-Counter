@@ -1,3 +1,10 @@
+# Skiing Activity Counter
+_React practice_
+
+### Description
+Recreate Skiing Activity Counter following lynda.com tutorial
+
+
 Clone project directions:
 
 1. $ git clone url-project-name
